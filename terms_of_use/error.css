@@ -1,0 +1,46 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    background-color: #F5F5F5;
+    color: #797979;
+}
+
+.main {
+    width: 90%;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+.block {
+    position: relative;
+    height: calc(100vh - 5rem);
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.error-page{
+	width: 70%;
+	margin: auto;
+	padding-top: 10rem;
+}
+
+.error-style{
+	color: #5E5E5E;
+    font-size: 2rem;
+    padding-left: .5em;
+    line-height: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+    
+    /*display: inline-block;*/
+    float: none;
+}
+
+.error-img{
+    width: 200px;
+}

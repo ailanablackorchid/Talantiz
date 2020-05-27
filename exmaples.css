@@ -1,0 +1,24 @@
+/* MAIN CSS FORMATS*/
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../fonts/notosans.woff") format("woff"),
+        url("../fonts/notosans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/roboto.ttf") format("truetype");
+}
+
+* {
+    font-family: "Noto Sans", sans-serif; 
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    background-color: #F5F5F5;
+}
+
+
+/*TERMS OF USE EXAMPLES*/

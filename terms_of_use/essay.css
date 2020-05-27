@@ -1,0 +1,416 @@
+/*@font-face {
+    font-family: "Noto Sans";
+    src: url("../fonts/notosans.woff") format("woff"),
+        url("../fonts/notosans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/roboto.ttf") format("truetype");
+}*/
+
+* {
+    font-family: "Noto Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    background-color: #F5F5F5;
+    color: #797979;
+}
+
+.main {
+    width: 90%;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+.block {
+    position: relative;
+    height: calc(100vh - 5rem);
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.essay-writing-page .row {
+    display: flex;
+}
+
+.essay-writing-page .row .form-group:not(:last-of-type) {
+    padding-right: 1.5rem
+}
+
+.essay-writing-page .form-group {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.3rem;
+    min-width: 18rem;
+}
+
+.essay-writing-page .form-group * {
+    color: #979797;
+}
+
+.essay-writing-page .form-group.form-group__error {
+    padding-bottom: .3rem;
+}
+
+.essay-writing-page .form-label {
+    padding: .3rem 0;
+    font-size: .9rem;    
+}
+
+.essay-writing-page .form-control {
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    border: 1px solid #DFDFDF;
+    background: transparent;
+}
+
+.essay-writing-page textarea.form-control {
+    min-height: 7rem;
+}
+
+.essay-writing-page .form-error {
+    font-size: .8rem;    
+    color: red;
+    line-height: 1rem;
+    display: none;
+}
+
+/*CHECKBOXES*/
+
+.essay-writing-page .form-group__error .form-error {
+    display: block;
+}
+
+.essay-writing-page .form-group.form-group__checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+
+.essay-writing-page .form-group.form-group__checkbox input {
+    display: none;
+}
+
+.essay-writing-page .form-group.form-group__checkbox .form-check {
+    width: 1rem;
+    height: 1rem;
+    background-color: #359BE0;
+    padding: .2rem;
+    display: flex;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.essay-writing-page .form-group.form-group__checkbox .form-check img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.essay-writing-page .form-group.form-group__checkbox input:checked + .form-check img {
+    display: block;
+}
+
+.essay-writing-page .form-group.form-group__checkbox .form-label {
+    padding: 0 .5rem;
+}
+
+.essay-writing-page .send-button {
+    background: #009C9B;
+    border-radius: 3px;
+    padding: 14px 45px;
+    display: inline-flex;
+    width: max-content;
+    white-space: nowrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+.essay-writing-page .send-button-label {
+    color: #FFFFFF;
+    font-size: 1rem;
+    width: 90%;
+    margin: 0;
+    cursor: pointer;
+    padding-right: 1rem;
+}
+
+.essay-writing-page .send-button-label:last-child {
+    padding-right: 0;
+}
+
+.essay-writing-page .send-button-arrow {
+    background: #fff;
+    height: 2px;
+    width: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+.essay-writing-page .send-button-arrow:after,
+.essay-writing-page .send-button-arrow:before {
+    content: "";
+    background: #fff;
+    position: absolute;
+    height: 2px;
+    width: 12px;
+}
+.essay-writing-page .send-button-arrow:before {
+    right: -3px;
+    bottom: -4px;
+    transform: rotate(-45deg);
+}
+.essay-writing-page .send-button-arrow:after {
+    right: -3px;
+    top: -4px;
+    transform: rotate(45deg);
+}
+
+.terms-of-use-block {
+    display: flex;
+    padding-bottom: 100px;
+}
+.terms-of-use-left {
+    width: 70%;
+    padding-right: 1rem;
+    flex-shrink: 0;
+}
+.terms-of-use-right {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/*STEP NUMBER*/
+
+.essay-writing-page .step-number {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #009193;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.essay-writing-page .step-name {
+    color: #5E5E5E;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-left: .5em;
+    line-height: 2.1rem;
+    font-weight: bold;
+    
+    display: inline-block;
+    float: none;
+}
+
+.essay-writing-page .step-header{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;    
+}
+
+.essay-writing-page .container-block-header{
+    background-color: rgb(0, 164, 158);
+    color: white;
+    padding: 10px 10px 10px 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
+.essay-writing-page .essay-textarea {
+    /*padding: 1rem 3rem;*/
+    border: 1px solid grey;
+    width: 100%;
+    height: 20rem;
+    color: #5E5E5E;
+    background-color: #f5f5f5;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: 1.5rem;
+}
+
+.essay-writing-page .text_block{
+    border: 1px solid grey;
+    padding: 20px;
+}
+
+
+
+
+.essay-writing-page .test_header1{
+    float: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 18pt;
+    padding: 10px;
+    /* margin-left: auto; margin-right: auto; */
+}
+
+.essay-writing-page .start_essay_test_button{
+    border: none;
+    background-color: #FDC02D;
+    color: white;
+    font-weight: bold;
+    padding: 15px 40px;
+    font-size: 14pt;
+    border-radius: 0px;
+    margin: 20px 30px;
+
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.essay-writing-page .test_buttons_start{
+    border: none;
+    background-color: rgb(0, 164, 158);
+    color: white;
+    font-weight: bold;
+    padding: 15px 40px;
+    font-size: 14pt;
+    border-radius: 0px;
+    margin:20px 30px;
+
+    float: none;
+    display: block;
+    margin: 10px auto;
+}
+
+.essay-writing-page .center_buttons{
+    float: none;
+    display: block;
+    margin: 10px auto;  
+}
+
+.essay-writing-page .button_container{
+      position: relative;
+}
+
+.essay-writing-page .button_row{
+    padding: 10px;
+    margin: 50px 0 50px 0;
+}
+
+.essay-writing-page .second_test_heading_img{
+    float: none;
+    display: block;
+    margin: 10px 10px auto auto;    
+    height: 50px;
+}
+
+.essay-writing-page .second_test_heading_text{
+    font-size: 28pt;
+    color: grey;
+    float: none;
+    display: block;
+    margin: 10px auto auto auto;
+}
+
+.essay-writing-page .second_test_heading{
+    margin: 20px auto;
+}
+
+.essay-writing-page .second_test_description{
+    text-align: center;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 18pt;
+    padding: 10px;
+}
+
+.essay-writing-page .second_test_description_paragraph{
+    display: inline-block;
+}
+
+.essay-writing-page .second_test_img_headings{
+    font-size: 18pt;
+    color: rgb(82, 181, 182);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.essay-writing-page .second_test_imgs{
+    max-height: 250px;
+    max-width: 500px;
+}
+
+.essay-writing-page .test_button_video{
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 40px;
+    font-size: 14pt;
+    border-radius: 0px;
+    /*margin:20px 30px;*/
+
+    float: none;
+    display: block;
+    margin: 10px auto;
+    background-color: #ffd043;
+}
+
+.essay-writing-page .second_test_img_name{
+    font-size: 16pt;
+    padding: 20px 0;
+}
+
+.essay-writing-page .test_buttons_test{
+    border: none;
+    background-color: rgb(0, 164, 158);
+    color: white;
+    font-weight: bold;
+    padding: 15px 40px;
+    font-size: 14pt;
+    border-radius: 0px;
+    /*margin:20px 30px;*/
+
+    float: none;
+    display: block;
+    margin: 10px auto;
+}
+
+.essay-writing-page .button_container_last{
+    position: relative;
+}
+
+.essay-writing-page .button_row_test{
+    margin: 10px auto;
+    float: none;
+    display: block;
+}
+
+.essay-writing-page .button_row_test_main{
+    margin: auto;
+    max-height: 250px;
+    max-width: 500px;
+}
+
+.essay-writing-page .essay-timer-form{
+    display: flex;
+}
+
+.essay-writing-page .essay-timer{
+    background-color: #FDC02D;
+    font-size: 1.2rem;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+    margin: auto 0 auto 0;
+}
+
+.essay-writing-page .essay-timer-info{
+    margin: 1rem;
+    font-size: 1.1rem;
+}

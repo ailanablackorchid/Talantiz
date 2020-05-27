@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="personal_account.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#defaultOpen').click();
+        })
+    	function openTab(evt, cityName) {
+		  // Declare all variables
+		  var i, tabcontent, tablinks;
+
+		  // Get all elements with class="tabcontent" and hide them
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";
+		  }
+
+		  // Get all elements with class="tablinks" and remove the class "active"
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+
+		  // Show the current tab, and add an "active" class to the button that opened the tab
+		  document.getElementById(cityName).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
+
+    </script>
+
+<title>Личный кабинет кандидата</title>
+</head>
+
+<body>
+<div class="personal_account">
+
+
+	<div class="tab">
+		<button class="tablinks" onload="defOpen()" onclick="openTab(event, 'Usr_steps')" id="defaultOpen">Личные данные</button>
+		<button class="tablinks" onclick="openTab(event, 'Usr_profile')">Форма кандидата</button>
+		<button class="tablinks" onclick="openTab(event, 'Usr_grading')">Результаты собеседования</button>
+	</div>
+
+
+	<div id="Usr_steps" class="tabcontent">
+	  	<div class="profile">
+        	<div class="left-content">
+                <div class="profile-avatar">
+                    <img src="img/img-01-min.jpg" alt="">
+                    <label for="avatar" class="profile-avatar-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </label>
+                    <input type="file" name="avatar" id="avatar" hidden>
+                </div>
+                <div class="mobile profile-block profile-block__general">
+                    <div class="profile-block-header">
+                        <h4 class="profile-block-header-title">Мукашев Адлет Гайниденович</h4>
+                        <div class="profile-block-header-social">
+                        </div>
+                        <div class="profile-block-header-edit">
+                            <img src="img/edit-g.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-block profile-block__left profile-block__contact">
+                    <div class="profile-block-header">
+                        <div class="profile-block-header-icon">
+                            <img src="img/profile-contacts.png" alt="">
+                        </div>
+                        <p class="profile-block-header-title">Контактная информация</p>
+                        <div class="profile-block-header-edit">
+                            <img src="img/edit-g.png" alt="">
+                        </div>
+                    </div>
+                    <div class="profile-block-content">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <img src="img/profile-contacts.png" alt="">
+                            </div>
+                            <p class="profile-block-text">ИИН: 890620351633</p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <img src="img/profile-contacts.png" alt="">
+                            </div>
+                            <p class="profile-block-text">Номер уд. личности:<br> 036939346</p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <img src="img/profile-city.png" alt="">
+                            </div>
+                            <p class="profile-block-text">Место рождения:<br>Карагандинская обл.</p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <img src="img/profile-city.png" alt="">
+                            </div>
+                            <p class="profile-block-text">Место проживания: г. Караганда</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <img src="img/profile-birthday.png" alt="">
+                            </div>
+                            <p class="profile-block-text">20.06.1989 (30 лет)</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <img src="img/profile-phone.png" alt="">
+                            </div>
+                            <p class="profile-block-text">+7(702) 802-9966</p>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+        	<div class="center-content">
+                <!-- Имя + базовая инфа -->
+                <div class="non-mobile profile-block profile-block__general">
+                    <div class="profile-block-header">
+                        <h4 class="profile-block-header-title">Мукашев Адлет Гайниденович</h4>
+                        <div class="profile-block-header-social">
+                        </div>
+                        <div class="profile-block-header-edit">
+                            <img src="img/edit-g.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Имя + базовая инфа - конец блока-->
+                <!-- Отраслевая группа -->
+                <div class="non-mobile profile-block">
+                    <div class="profile-block-header-usr-steps">
+                        <div class="profile-block-header-icon">
+                            <img src="img/profile-about-w.png" alt="">
+                        </div>
+                        <p class="profile-block-header-title">Отраслевая группа должности и направления</p>
+                        <div class="profile-block-header-edit">
+                            <!-- <img src="img/edit-g.png" alt=""> -->
+                        </div>
+                    </div>
+                    <div class="profile-block-content">
+                        <p class="profile-block-text">Вторая, четвертая</p>
+                    </div>
+                </div>
+                <!-- Отраслевая группа - конец блока -->
+                <!-- Занимаемая должность -->
+                <div class="profile-block">
+                    <div class="profile-block-header-usr-steps">
+                        <div class="profile-block-header-icon">
+                            <img src="img/profile-workexp-w.png" alt="">
+                        </div>
+                        <p class="profile-block-header-title">Занимаемая должность</p>
+                        <div class="profile-block-header-edit">
+                            <img src="img/edit-g.png" alt="">
+                        </div>
+                    </div>
+                    <div class="profile-block-content">
+                        <div class="profile-block-item">
+                            <div class="profile-block-item-left">
+                                <div class="profile-block-item-framed">2013</div>
+                            </div>
+                            <div class="profile-block-item-info">
+                                <p class="profile-block-text"> <b>Директор</b> департамента стратегического планирования Министерства обороны и аэрокосмической промышленности</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Занимаемая должность - конец блока -->
+                <!-- Квалификация -->
+                <div class="profile-block">
+                    <div class="profile-block-header-usr-steps">
+                        <div class="profile-block-header-icon">
+                            <img src="img/profile-education-w.png" alt="">
+                        </div>
+                        <p class="profile-block-header-title">Квалификация</p>
+                        <div class="profile-block-header-edit">
+                            <img src="img/edit-g.png" alt="">
+                        </div>
+                    </div>
+                    <div class="profile-block-content">
+                        <div class="profile-block-item">
+                            <div class="profile-block-item-left">
+                                <div class="profile-block-item-framed">2013</div>
+                            </div>
+                            <div class="profile-block-item-info">
+                                <p class="profile-block-text"> <b>Карагандинский экономический университет
+                                        Казпотребсоюза</b> - Очная </p>
+                                <p class="profile-block-text">Бакалавр</p>
+                                <p class="profile-block-text">Правовое регулирование в сфере экономики</p>
+                            </div>
+                        </div>
+                        <div class="profile-block-item">
+                            <div class="profile-block-item-left">
+                                <div class="profile-block-item-framed">2013</div>
+                            </div>
+                            <div class="profile-block-item-info">
+                                <p class="profile-block-text"> <b>Карагандинский экономический университет
+                                        Казпотребсоюза</b> - Очная </p>
+                                <p class="profile-block-text">Бакалавр</p>
+                                <p class="profile-block-text">Правовое регулирование в сфере экономики</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Квалификация - конце блока -->
+                <!-- Ученая степень -->
+                <div class="profile-block">
+                    <div class="profile-block-header-usr-steps">
+                        <div class="profile-block-header-icon">
+                            <img src="img/profile-education-w.png" alt="">
+                        </div>
+                        <p class="profile-block-header-title">Ученая степень</p>
+                        <div class="profile-block-header-edit">
+                            <img src="img/edit-g.png" alt="">
+                        </div>
+                    </div>
+                    <div class="profile-block-content">
+                        <div class="profile-block-item">
+                            <div class="profile-block-item-left">
+                                <div class="profile-block-item-framed">2016</div>
+                            </div>
+                            <div class="profile-block-item-info">
+                                <p class="profile-block-text"> <b>Карагандинский экономический университет
+                                        Казпотребсоюза</b> - Очная </p>
+                                <p class="profile-block-text">Магистр</p>
+                                <p class="profile-block-text">Правовое регулирование в сфере экономики</p>
+                            </div>
+                        </div>
+                        <div class="profile-block-item">
+                            <div class="profile-block-item-left">
+                                <div class="profile-block-item-framed">2019</div>
+                            </div>
+                            <div class="profile-block-item-info">
+                                <p class="profile-block-text"> <b>Карагандинский экономический университет
+                                        Казпотребсоюза</b> - Очная </p>
+                                <p class="profile-block-text">Доктор наук</p>
+                                <p class="profile-block-text">Правовое регулирование в сфере экономики</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ученая степень - конец блока -->
+                <!-- Рекомендации -->
+                <div class="non-mobile profile-block">
+                    <div class="profile-block-header-usr-steps">
+                        <div class="profile-block-header-icon">
+                            <img src="img/recommended-w.png" alt="">
+                        </div>
+                        <p class="profile-block-header-title">Рекомендации</p>
+                        <div class="profile-block-header-edit">
+                            <!-- <img src="img/edit-g.png" alt=""> -->
+                        </div>
+                    </div>
+                    <div class="profile-block-content">
+                        <p class="profile-block-text"><b>Атамкулов Б. Б.</b></p>
+                        <p class="profile-block-text">Министр оборонной и аэрокосмической промышленности (категория 2, категория 4)</p>
+                    </div>
+                </div>
+            <!-- Рекомендации - конец блока -->
+            <!-- Конец центрального блока -->
+        	</div>
+        	<div class="right-content">
+            <!-- Accordion grades -->
+                <nav class="menu">
+
+                    <a class="first" href="#">Результаты этапов отбора</a>    
+
+                    <nav class="drop-down-menu">
+                      <input type="checkbox" class="activate" id="accordion-1" name="accordion-1">
+                      <label for="accordion-1" class="menu-title">Тестирование способностей
+                        <div class="menu-title-align-right">
+                            <img src="img/video-camera.svg" class="grades-video-icon"> 5 ▼
+                        </div>
+                      </label>
+
+                      <div class="drop-down">
+                        <a href="#">Запись кандидата</a>
+                        <video width="300" height="220" controls>
+                          <source src="movie.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </nav>
+
+                    <nav class="drop-down-menu">
+                      <input type="checkbox" class="activate" id="accordion-2" name="accordion-2">
+                      <label for="accordion-2" class="menu-title">Оценка потенциала
+                        <div class="menu-title-align-right">
+                            <img src="img/video-camera.svg" class="grades-video-icon"> 5 ▼
+                        </div>
+                      </label>
+                      <div class="drop-down">
+                        <a href="#">Запись кандидата</a>
+                        <video width="300" height="220" controls>
+                          <source src="movie.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </nav>              
+
+                    <nav class="drop-down-menu">
+                      <input type="checkbox" class="activate" id="accordion-3" name="accordion-3">
+                      <label for="accordion-3" class="menu-title">Презентация проекта
+                        <div class="menu-title-align-right">
+                            <img src="img/video-camera.svg" class="grades-video-icon">5 ▼
+                        </div>
+                      </label>
+                      
+                      <div class="drop-down">
+                        <a href="#">Запись кандидата</a>
+                        <video width="300" height="220" controls>
+                          <source src="movie.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </nav>   
+
+                    <nav class="drop-down-menu">
+                      <input type="checkbox" class="activate" id="accordion-4" name="accordion-4">
+                      <label for="accordion-4" class="menu-title">Написание эссе
+                        <div class="menu-title-align-right">
+                            <img src="img/video-camera.svg" class="grades-video-icon">5 ▼
+                        </div>
+                        </label>
+                      <div class="drop-down">
+                        <a href="#">Запись кандидата</a>
+                        <video width="300" height="220" controls>
+                          <source src="movie.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </nav>
+
+                    <nav class="drop-down-menu">
+                      <input type="checkbox" class="activate" id="accordion-5" name="accordion-5">
+                      <label for="accordion-5" class="menu-title">Оценка компетенций
+                        <div class="menu-title-align-right">
+                         5 ▼
+                        </div>
+                      </label>
+                      <div class="drop-down">
+                        <a href="#">Лидерство<div class="menu-title-align-right">5</div></a>
+                        <a href="#">Лидерство<div class="menu-title-align-right">5</div></a>
+                        <a href="#">Лидерство<div class="menu-title-align-right">5</div></a>
+                        <a href="#">Лидерство<div class="menu-title-align-right">5</div></a>
+                        <a href="#">Лидерство<div class="menu-title-align-right">5</div></a>
+                      </div>
+                    </nav>
+
+
+                    <a class="last">Общий балл<div class="menu-title-align-right">5</div></a>             
+
+                </nav>
+                <!-- Accordion grades - end of the block-->
+        	</div>
+    	</div>
+        <div class="usr-grades-center-content">
+            <div class="usr-grades-profile-block-header-title">Результаты проверки</div>
+            <div class="usr-grades-profile-block-text">Дискредитирующих данных не обнаружено.
+            </div>
+
+        </div>
+	</div>	
+
+    <div id="Usr_profile" class="tabcontent">
+        <div class="profile">
+            <div class="left-content">
+            <div class="profile-avatar">
+                <img src="img/img-01-min.jpg" alt="">
+                <label for="avatar" class="profile-avatar-edit">
+                    <img src="img/edit-g.png" alt="">
+                </label>
+                <input type="file" name="avatar" id="avatar" hidden>
+            </div>
+            <div class="mobile profile-block profile-block__general">
+                <div class="profile-block-header">
+                    <h4 class="profile-block-header-title">Мукашев Адлет Гайниденович</h4>
+                    <div class="profile-block-header-social">
+                        <img src="img/linkedin.png" alt="">
+                    </div>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <p class="profile-block-text">Национальность: Казах</p>
+                    <p class="profile-block-text">Номер удостоверения личности: 036939346</p>
+                    <p class="profile-block-text">ИИН: 890620351633</p>
+                </div>
+            </div>
+            <div class="mobile profile-block">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/profile-about-w.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Обо мне</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <p class="profile-block-text">Поле обо мне не заполнено. Расскажите о себе.</p>
+                </div>
+            </div>
+            <div class="profile-block profile-block__left profile-block__contact">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/profile-contacts.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Контактная информация</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img src="img/profile-city.png" alt="">
+                        </div>
+                        <p class="profile-block-text">Нур-Султан</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img src="img/profile-birthday.png" alt="">
+                        </div>
+                        <p class="profile-block-text">20.06.1989 (30 лет)</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img src="img/profile-phone.png" alt="">
+                        </div>
+                        <p class="profile-block-text">+7(702) 802-9966</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img src="img/profile-email.png" alt="">
+                        </div>
+                        <p class="profile-block-text">mukashev-a@list.ru</p>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-block profile-block__left">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/profile-languages.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Языки</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <p class="profile-block-text profile-block-text__bold">Русский</p>
+                    <p class="profile-block-text">Свободно</p>
+                </div>
+            </div>
+            <div class="profile-block profile-block__left">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/profile-skills.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Ключевые навыки</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <p class="profile-block-text">Агентские продажи</p>
+                    <p class="profile-block-text">Административная поддержка руководителя</p>
+                    <p class="profile-block-text">Административное право</p>
+                </div>
+            </div>
+            <div class="profile-block profile-block__left">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/profile-skills.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Дополнительные навыки</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <p class="profile-block-text">Недвижимость</p>
+                    <p class="profile-block-text">Продажи</p>
+                    <p class="profile-block-text">Ведение переговоров</p>
+                </div>
+            </div>
+            </div>
+            <div class="center-content">
+            <div class="non-mobile profile-block profile-block__general">
+                <div class="profile-block-header">
+                    <h4 class="profile-block-header-title">Мукашев Адлет Гайниденович</h4>
+                    <div class="profile-block-header-social">
+                        <img src="img/linkedin.png" alt="">
+                    </div>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <p class="profile-block-text">Национальность: Казах</p>
+                    <p class="profile-block-text">Удостоверение личности: 036939346</p>
+                    <p class="profile-block-text">ИИН: 890620351633</p>
+                </div>
+            </div>
+            <div class="non-mobile profile-block">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/profile-about-w.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Обо мне</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <p class="profile-block-text">Поле обо мне не заполнено. Расскажите о себе.</p>
+                </div>
+            </div>
+            <div class="profile-block">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/profile-education-w.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Образование</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <div class="profile-block-item">
+                        <div class="profile-block-item-left">
+                            <div class="profile-block-item-framed">2013</div>
+                        </div>
+                        <div class="profile-block-item-info">
+                            <p class="profile-block-text"> <b>Карагандинский экономический университет
+                                    Казпотребсоюза</b> - Очная </p>
+                            <p class="profile-block-text">Бакалавр</p>
+                            <p class="profile-block-text">Правовое регулирование в сфере экономики</p>
+                        </div>
+                    </div>
+                    <div class="profile-block-item">
+                        <div class="profile-block-item-left">
+                            <div class="profile-block-item-framed">2013</div>
+                        </div>
+                        <div class="profile-block-item-info">
+                            <p class="profile-block-text"> <b>Карагандинский экономический университет
+                                    Казпотребсоюза</b> - Очная </p>
+                            <p class="profile-block-text">Бакалавр</p>
+                            <p class="profile-block-text">Правовое регулирование в сфере экономики</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-block">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/profile-workexp-w.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Опыт работы</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <div class="profile-block-item">
+                        <div class="profile-block-item-left">
+                            <div class="profile-block-item-framed">
+                                <p>01.2014 - 01.2017</p>
+                                <p>3 года</p>
+                            </div>
+                        </div>
+                        <div class="profile-block-item-info">
+                            <p class="profile-block-text profile-block-text__bold">Страховая компания «NOMAD Insurance»,
+                                Караганда</p>
+                            <p class="profile-block-text">Специалист по страхованию</p>
+                            <p class="profile-block-text">Заключение и оформление договоров, поиск и привлечение
+                                клиентов, консультация клиентов, ведение переговоров</p>
+                        </div>
+                    </div>
+                    <div class="profile-block-item">
+                        <div class="profile-block-item-left">
+                            <div class="profile-block-item-framed">
+                                <p>01.2014 - 01.2017</p>
+                                <p>3 года</p>
+                            </div>
+                        </div>
+                        <div class="profile-block-item-info">
+                            <p class="profile-block-text profile-block-text__bold">Страховая компания «NOMAD Insurance»,
+                                Караганда</p>
+                            <p class="profile-block-text">Специалист по страхованию</p>
+                            <p class="profile-block-text">Заключение и оформление договоров, поиск и привлечение
+                                клиентов, консультация клиентов, ведение переговоров</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-block">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/profile-certificates-w.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Сертификаты</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <div class="profile-block-item">
+                        <div class="profile-block-item-left">
+                            <div class="profile-block-item-framed">2017</div>
+                        </div>
+                        <div class="profile-block-item-info">
+                            <p class="profile-block-text profile-block-text__bold">Страховая компания «NOMAD Insurance»,
+                                Караганда</p>
+                            <p class="profile-block-text">Сертификат за верстку</p>
+                            <a href="#">Скачать</a>
+                        </div>
+                    </div>
+                    <div class="profile-block-item">
+                        <div class="profile-block-item-left">
+                            <div class="profile-block-item-framed">2017</div>
+                        </div>
+                        <div class="profile-block-item-info">
+                            <p class="profile-block-text profile-block-text__bold">Страховая компания «NOMAD Insurance»,
+                                Караганда</p>
+                            <p class="profile-block-text">Сертификат за верстку</p>
+                            <a href="#">Скачать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-block">
+                <div class="profile-block-header">
+                    <div class="profile-block-header-icon">
+                        <img src="img/recommended-w.png" alt="">
+                    </div>
+                    <p class="profile-block-header-title">Рекомедательные письма</p>
+                    <div class="profile-block-header-edit">
+                        <img src="img/edit-g.png" alt="">
+                    </div>
+                </div>
+                <div class="profile-block-content">
+                    <div class="profile-block-item">
+                        <div class="profile-block-item-left">
+                            <div class="profile-block-item-framed">Интернет магазин SUMOM.KZ</div>
+                        </div>
+                        <div class="profile-block-item-info">
+                            <p class="profile-block-text"><b>Должность</b> Директор </p>
+                            <p class="profile-block-text"><b>Рекомендатель</b> Лада Алексей</p>
+                            <a href="#">Скачать</a>
+                        </div>
+                    </div>
+                    <div class="profile-block-item">
+                        <div class="profile-block-item-left">
+                            <div class="profile-block-item-framed">Интернет магазин SUMOM.KZ</div>
+                        </div>
+                        <div class="profile-block-item-info">
+                            <p class="profile-block-text"><b>Должность</b> Директор </p>
+                            <p class="profile-block-text"><b>Рекомендатель</b> Лада Алексей</p>
+                            <a href="#">Скачать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="right-content">
+                <div class="profile-block-fixed">
+                    <div class="profile-video-greeting">
+                    <video id="player" src="https://www.talantiz.com/storage/videos/hello/422.webm?1566650035"
+                        controls=""></video>
+                    </div>
+                    <div class="profile-general-btns-container">
+                    <div id="reserve" class="profile-general-btn">
+                        <span>Кадровый резерв</span>
+                    </div>
+                    <div id="overwrite" class="profile-general-btn">
+                        <div class="mobile profile-general-btn-icon">
+                            <img src="img/video-camera.svg" alt="">
+                        </div>
+                        <span>Перезаписать видеоприветствие</span>
+                    </div>
+                    <div id="download-resume" class="profile-general-btn">
+                        <div class="mobile profile-general-btn-icon">
+                            <img src="img/download.svg" alt="">
+                        </div>
+                        <span>Скачать резюме</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>  
+
+	<div id="Usr_grading" class="tabcontent">
+        <div class="final-grade-user">
+            <div class="name-title">Мукашев Адлет Гайниденович</div>
+            <div class="grading">
+                <div class="grading-heading">Ваша оценка данного кандидата</div>
+                <div class="grading-system">
+                    <div class="grade">
+                        <div class="grade-circle" href="">
+                            <div class="grade-number">5</div>
+                        </div>
+                        <div class="grade-circle-description">Превышает ожидания</div>
+                    </div>
+                    <div class="grade">
+                        <div class="grade-circle" href="">
+                            <div class="grade-number">4</div>
+                        </div>
+                        <div class="grade-circle-description">Соотвествует</div>
+                    </div>
+                    <div class="grade">
+                        <div class="grade-circle" href="">
+                            <div class="grade-number">3</div>
+                        </div>
+                        <div class="grade-circle-description">Удовлетворительно</div>
+                    </div>
+                    <div class="grade">
+                        <div class="grade-circle" href="">
+                            <div class="grade-number">2</div>
+                        </div>
+                        <div class="grade-circle-description">Не соответствует ожиданиям</div>
+                    </div>
+                    <div class="grade">
+                        <div class="grade-circle" href="">
+                            <div class="grade-number">1</div>
+                        </div>
+                        <div class="grade-circle-description">Неподготовленный кандидат</div>
+                    </div>
+
+                    <div class="button-container">
+                        <div class="button" href="">
+                            <p class="button-label"> << Назад</p>
+                        </div>  
+                        <div class="button save" href="">
+                            <p class="button-label">Сохранить</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grade-disclaimer">Внимание! Нажав кнопку "Сохранить", Вы не сможете изменить оценку</div>
+        </div>
+	</div>
+
+</div>
+</body>
+</html>

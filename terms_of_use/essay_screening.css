@@ -1,0 +1,215 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    background-color: #F5F5F5;
+    color: #797979;
+}
+
+.essay-screening{
+	width: 90%;
+    margin: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem; 
+}
+
+.essay-check-block{
+	display: flex;
+    padding-bottom: 40px;
+}
+
+.essay-left {
+    width: 50%;
+    padding-right: 1rem;
+    flex-shrink: 0;
+}
+
+.essay-container-block-header{
+    background-color: rgb(0, 164, 158);
+    color: white;
+    padding: 10px 10px 10px 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.essay-container-block-header-video{
+    background-color: rgb(0, 164, 158);
+    color: white;
+    padding: 10px 10px 10px 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    border: 1px solid grey;	
+}
+
+.essay-content {
+    padding: 1rem 3rem;
+    border: 1px solid grey;
+}
+
+.essay-textarea-content{
+	padding: 0;
+	/*border: 1px solid grey;*/
+}
+
+.essay-textarea{
+	border: 1px solid grey;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 1rem 3rem;
+	height: 25.15rem;
+}
+
+.essay-text{
+    overflow: scroll;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    width: inherit;
+    height: 20rem;
+    line-height: 1.5rem;
+    margin: 1rem 0rem 2rem 0rem;
+}
+
+.essay-video{
+	display: flex;
+	position: fixed;
+	left: 2rem;
+	top: 1rem;
+}
+
+.video-modal{
+    /*width: 0%;*/
+    padding-right: 1rem;
+    flex-shrink: 0;
+}
+
+.essay-header{
+	background-color: #cccccc;
+	color: black;
+	border: 1px solid grey;
+	padding: 0.5rem;
+	width: 100%;
+	margin-bottom: 1.5rem;
+}
+
+.essay-id{
+	display: flex;
+	margin-bottom: 2rem;
+}
+
+.essay-id .id-square{
+	width: 2rem;
+	height: 2rem;
+	background-color: grey;
+	margin: auto 0px auto 0px;
+}
+
+.essay-id .id-number{
+	color: #444444;
+	font-weight: bold;
+	font-size: 2rem;
+	padding: 0 1rem;
+	margin: auto 0px auto 0px;
+}
+
+.essay-id .video-icon{
+	margin: auto 0 auto 0;
+	padding: 0;
+	background-color: #f5f5f5;
+	border: none;
+}
+
+.essay-screening .button{
+	background: #009C9B;
+    border-radius: 3px;
+    padding: 10px 30px;
+    display: inline-flex;
+    width: max-content;
+    white-space: nowrap;
+    align-items: center;
+    cursor: pointer;
+    margin: auto 0 auto 1rem;
+}
+
+.essay-screening .save{
+	background: #fbd560;
+}
+
+.essay-screening .button-label{
+	color: #FFFFFF;
+    font-size: 1rem;
+    width: 90%;
+    margin: 0;
+    cursor: pointer;
+    padding-right: 1rem;
+}
+
+.essay-screening .button-container{
+    margin: auto 0 auto auto;	
+}
+
+.essay-grading{
+	display: inline-flex;
+	margin: auto;
+}
+
+.essay-grading .circle{
+	margin: .5rem;
+	background: #009C9B;
+	border-radius: 3rem;
+	width: 3rem;
+	height: 3rem;
+}
+
+.essay-grading .circle:hover{
+	background: #fbd560;
+}
+
+.essay-grading .user-grade{
+	text-align: center;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14pt;
+	line-height: 3rem;
+	color: white;
+}
+
+.center-grading{
+	margin: 0 auto 1rem auto;
+	display: flex;	
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin:-9px auto auto -14px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.essay-screening .button-last{
+	background: #fbd560;
+    border-radius: 3px;
+    padding: 10px 30px;
+    display: inline-flex;
+    width: max-content;
+    white-space: nowrap;
+    align-items: center;
+    cursor: pointer;
+    margin: auto;
+}
+
+.submit-grade{
+	margin: 0 auto 1rem auto;
+	display: flex;		
+}

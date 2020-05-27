@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="aifc_modal.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+
+<title>AIFC Modals</title>
+</head>
+<body>
+<div class="aifc-modal">	
+	<div id="modal-notify" class="modal">
+        	<div clsass="modal-container">
+
+            <div class="modal-content">
+            	<img class="aifc-logo" src="img/aifc_logo.png" alt="">
+            	<p class="modal-text">Вы в шаге от того, чтобы стать частью BCPD Community. </p>
+
+				<p class="modal-text">После принятия условий пользовательского соглашения, данные которые вы предоставляли для BCPD, будут автоматически синхронизированы в ваш Личный Кабинет.</p>
+
+				<div class="modal-checkbox-group">
+
+					<label for="agreement" class="form-group form-group__checkbox">
+				  		<input type="checkbox" id="agreement" name="agreement">
+	                    <div class="form-check">
+	                        <img src="img/Indicator.svg" alt="">
+	                    </div>
+	                    <span class="form-label">Я принимаю условиям пользовательского соглашения</span>
+	              	</label>	
+
+					<label for="agreement" class="form-group form-group__checkbox">
+				  		<input type="checkbox" id="agreement" name="agreement">
+	                    <div class="form-check">
+	                        <img src="img/Indicator.svg" alt="">
+	                    </div>
+	                    <span class="form-label">Я даю согласие на сбор и обработку персональных данных</span>
+	              	</label>	
+
+					<label for="agreement" class="form-group form-group__checkbox">
+				  		<input type="checkbox" id="agreement" name="agreement">
+	                    <div class="form-check">
+	                        <img src="img/Indicator.svg" alt="">
+	                    </div>
+	                    <span class="form-label">Подписаться на рассылку</span>
+	            	</label>
+
+            	</div>
+
+
+    	    	<div class="send-button activate-button">
+    	      	  <p class="send-button-label">Активировать</p>
+    	    	</div>
+
+        		<p class="modal-text">Если вы не желаете присоединиться к BCPD Community, вы можете закрыть ваш Личный Кабинет</p>
+
+	        	<div class="send-button close-profile">
+	          	  <p class="send-button-label">Закрыть профиль</p>
+	        	</div>
+
+            </div>
+            
+        	</div>
+    	</div>
+    </div>
+
+	<script>openNotification();</script>
+</div>
+
+</body>
+</html>
